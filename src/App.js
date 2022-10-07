@@ -1,4 +1,4 @@
-import './App.css';
+
 import { Firebase } from './Firebase/Config';
 function App() {
   return (
@@ -18,13 +18,11 @@ function App() {
 
           // })
 
-          
-          Firebase.firestore().collection('products').add({
-            name:"Mi",
-            type:"mobile",
-            price:"12999"
 
+          Firebase.firestore().collection('products').doc("ZWp6rCdqB6Ag0cGyohaD").delete().then(()=>{
+             console.log("delete done successfully")
           })
+          
        }}>
         click me
        </button>
